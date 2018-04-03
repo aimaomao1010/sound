@@ -1,3 +1,6 @@
+//#define DEBUG
+// constant definitions
+#define SAMPLERATE 16000
 //header file for processing sound (WAV) file
 //define the WAV header
 typedef struct
@@ -21,6 +24,6 @@ typedef struct
 
 //function prototypes
 void displayWAVheader(char filename[]);
-void diplayBar(char filename[]);
+void displayBar(char filename[]);
 void printID(char []);
 
