@@ -1,3 +1,4 @@
+#include "comm.h"
 #include "sound.h"
 #include <stdio.h>
 #include <math.h>
@@ -44,6 +45,10 @@ void displayBar(char filename[])
 		bar(i, dB);
 #endif
 	}	// for
+#ifdef COMM	//conditional
+//	printf("123435");
+	sendToServer(rms_80);
+#endif
 }	// function
 
 
@@ -54,13 +59,13 @@ void displayWAVheader(char filename[])
 	WAVHeader myhdr;	// an instance of defined struct
 	FILE *fp;
 	fp = fopen(filename,"r");	//open the file for reading
-	fclose(fp);
 	if(fp == NULL)	// if open is failed
 	{
 		printf("ERROR of opening file!\n");
 		return;
 	}
 	fread(&myhdr, sizeof(WAVHeader), 1, fp);
+	fclose(fp);
 	printID(myhdr.chunkID);
 	printf("chunk size: %d\n", myhdr.chunkSize);
 	printID(myhdr.format);
