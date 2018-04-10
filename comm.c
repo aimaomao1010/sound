@@ -3,10 +3,14 @@
 #include <stdio.h>	//sprintf()
 #include <curl/curl.h>	//libcurl
 
-//This function takes in RMS values of 1 second, each is culculated by 16000/80=200
-// samples, nut the function will re-calculate 8-pieces of RMS values, each
-// corresponding to 2000 samples or 125ms of sound.
-
+/*
+	This function takes in RMS values of 1 second, each is culculated by 16000/80=200
+	samples, nut the function will re-calculate 8-pieces of RMS values, each
+	corresponding to 2000 samples or 125ms of sound.
+	input argument: double r80[]: 80 row of decible data
+	output: connect and pass the data to local sound.php file
+	return argument: none
+*/
 void sendToServer(double r80[])
 {
 	double r8[8], sum;

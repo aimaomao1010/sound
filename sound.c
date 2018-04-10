@@ -3,13 +3,14 @@
 #include <stdio.h>
 #include <math.h>
 #include "screen.h"
-// function definition of displayBar()
 
-// this function opens the "test.wav" file and reads the second part(data) of
-// this file. The samples should be in S16_LE format, and there are 16000 of
-// them. The function processes every 200 samples and calculate their RMS value
-// and renders this value as a vertical bar on terminal screen
-
+/*
+	Function definition of displayBar()
+	This function opens the "test.wav" file and reads the second part(data) of
+	this file. The samples should be in S16_LE format, and there are 16000 of
+	them. The function processes every 200 samples and calculate their RMS value
+	and renders this value as a vertical bar on terminal screen
+*/
 void displayBar(char filename[])
 {
 	FILE*fp;
@@ -51,9 +52,15 @@ void displayBar(char filename[])
 #endif
 }	// function
 
-
-// function definition of displayWAVheader()
-
+/*
+	Function definition of displayWAVheader()
+	This function open file and get the value in that file
+	input argument: char name: file name
+	output: print: chunk ID, chunk size, format, subchunk1 ID, subchunk1 size,
+					audio format, number of channels, sample rate, block align,
+					bits per sample, subchunk2 size
+	return argument: none
+*/
 void displayWAVheader(char filename[])
 {
 	WAVHeader myhdr;	// an instance of defined struct
@@ -80,9 +87,16 @@ void displayWAVheader(char filename[])
 	printf("bits per sample : %d\n", myhdr.bitsPerSample);
 	printf(myhdr.subchunk2ID);
 	printf("subchunk 2 size : %d\n", myhdr.subchunk2Size);
-
 }
 
+/*
+	Function definition of printID()
+	This function get the value of properties(chunkID, format, subchunk1ID)
+	which have to show multiple value(string)
+	input argument: char id[]
+	output argument: print id value
+	return argument: none
+*/
 void printID(char id[])
 {
 	int i;
