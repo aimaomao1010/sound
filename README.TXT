@@ -15,8 +15,8 @@ Instruction Content
 		- Open a "terminal" window (Ctrl+ESC, and choose from the “Accessories”)
 		- Run "sudo raspi-config" in the terminal
 		- Select "boot options"- "B2 Console Autologin"
-		- The newer version of Raspbian disables SSH by default, therefore you have to enable it.
-			Navigate to and select “SSH”, Choose “Yes”, Select “Ok”
+		- The newer version of Raspbian disables SSH by default, therefore you 
+			have to enable it. Navigate to and select.
 		- (Optional-change keyboard layout)Select "Internationalisation Options"
 		- Run "sudo reboot" to reboot
 	Send IP Address by Email
@@ -73,16 +73,41 @@ Instruction Content
 
 4. Mainfest (list of files and short description of their roles)
 	Original File : main.c, sound.c, screen.c, comm.c,
-						sound.h, screen.h, comm.h,
-						makefile
+					sound.h, screen.h, comm.h,
+					makefile
 	Generate : After you run the sound project, 
-					it will automatically generate sound.a and final.tar
-					when you use "make" command to complie the code successfully, 
-					also generate the test.wav which record the sound 
-					when you use "./sound.a" command to run the project.
+				it will automatically generate sound.a and final.tar
+				when you use "make" command to complie the code successfully, 
+				also generate the test.wav which record the sound 
+				when you use "./sound.a" command to run the project.
 
 5. License
-	All the right of the project is released.
+	These files are designed to be used by Dan Wang, a command-line license 
+		generator for software projects
+	All licenses in this repository are copyrighted by their respective 
+		authors.	
+	Everything else is released under CC0.
+	--------------------------------------------------------------
+	No Copyright
+
+	The person who associated a work with this deed has dedicated the work to the
+	public domain by waiving all of his or her rights to the work worldwide under
+	copyright law, including all related and neighboring rights,
+	to the extent allowed by law.	
+	You can copy, modify, distribute and perform the work, even for commercial
+	purposes, all without asking permission. See Other Information below.
+	
+	Other Information:
+		In no way are the patent or trademark rights of any person affected
+	        by CC0, nor are the rights that other persons may have in the 
+	        work or in how the work is used, such as publicity or privacy 
+	        rights.
+		Unless expressly stated otherwise, the person who associated a work 
+			with this deed makes no warranties about the work, and disclaims 
+			liability for all uses of the work, to the fullest extent 
+			permitted by applicable.
+		When using or citing the work, you should not imply endorsement by 
+			the author or the affirmer.
 
 6. Contact information 
 	Author: Dan Wang 
